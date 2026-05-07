@@ -190,6 +190,60 @@ The application combines selected character sets such as:
 
 JavaScript randomization functions are used to create secure and unpredictable passwords dynamically 🔒.
 
+# ▶️ How to Run the Project
+
+## 💻 Method 1 — Run Locally
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/your-username/Password-Generator.git
+```
+
+### 2️⃣ Open the project folder
+
+```bash
+cd Password-Generator
+```
+
+### 3️⃣ Open `index.html` in your browser 🌐
+
+---
+
+## ⚡ Method 2 — Using VS Code Live Server
+
+1️⃣ Open the project in VS Code 💻  
+2️⃣ Install the **Live Server** extension 🧩  
+3️⃣ Right-click on `index.html`  
+4️⃣ Click **Open with Live Server** ▶️
+
+---
+
+# 📷 Application Preview
+
+## 🖥️ Desktop View
+_Add your screenshot here_
+
+## 📱 Mobile View
+_Add your screenshot here_
+
+---
+
+# 🚀 Future Improvements
+
+✅ Dark / Light Theme Enhancements  
+✅ Cloud Sync Support  
+✅ Password Breach Checker API  
+✅ User Authentication System  
+✅ Export as TXT / CSV / PDF  
+✅ Advanced Password Analytics  
+✅ Progressive Web App (PWA)
+
+---
+
+# 📜 License
+
+This project is licensed under the **MIT License** 📄
 ---
 
 # 📂 Project Structure
