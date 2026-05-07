@@ -24,6 +24,9 @@ The application also includes advanced features like:
 ✨ Password Strength Indicator  
 📋 Copy to Clipboard  
 🕘 Password History  
+📄 PDF Export Feature  
+🗑 Clear History Option  
+💾 Local Storage Support  
 📱 Responsive Design  
 🎨 Modern UI Effects  
 ⚡ Smooth Animations  
@@ -76,6 +79,41 @@ This helps users understand password security quality before using it.
 - Stores recently generated passwords 🗂️
 - Allows users to review previously generated passwords 🔍
 - Improves convenience and usability 💡
+
+---
+
+## 🗑 Clear History Feature
+
+The application now includes a **Clear History** option that allows users to remove visible password history from the interface without deleting stored passwords from browser local storage 💾.
+
+### ✨ Benefits
+✅ Cleaner interface  
+✅ Better privacy control  
+✅ Improved user experience  
+✅ Stored passwords remain safe internally  
+
+---
+
+## 📄 Export Password History as PDF
+
+Users can export generated password history as a professional PDF document using the **jsPDF library** 📑.
+
+### ✨ Features
+✅ One-click PDF export  
+✅ Offline backup support  
+✅ Clean PDF generation  
+✅ Fast and easy download experience  
+
+---
+
+## 💾 Local Storage Integration
+
+The application uses the **Local Storage API** to securely save recent password history in the browser.
+
+### ✨ Advantages
+✅ Persistent password history  
+✅ Faster access to recent passwords  
+✅ Improved convenience and usability  
 
 ---
 
@@ -134,6 +172,8 @@ Used for:
 - Event handling
 - Clipboard functionality
 - Password strength checking
+- Local storage handling
+- PDF export functionality
 
 ---
 
