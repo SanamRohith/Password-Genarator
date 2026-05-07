@@ -240,7 +240,21 @@ _Add your screenshot here_
 ✅ Progressive Web App (PWA)
 
 ---
+---
 
+# 📸 Project Screenshots
+
+## 🏠 Home Screen
+
+![Home Screen](photos/Home1.png)
+
+---
+
+## 🔐 Password Generator Interface
+
+![Password Generator](photos/Home2.png)
+
+---
 # 📜 License
 
 This project is licensed under the **MIT License** 📄
