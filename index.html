@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Password Generator
+    </title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <!-- THEME TOGGLE -->
+
+            <div class="theme-toggle-container">
+
+                <button id="themeToggle">
+
+                    🌙 Dark Mode
+
+                </button>
+
+            </div>
+
+            <!-- TITLE -->
+
+            <h1>
+                Password Generator
+            </h1>
+
+            <!-- BASE WORD INPUT -->
+
+            <div class="option-group base-word-group">
+
+                <label for="baseWord">
+
+                    Enter base word (optional)
+
+                </label>
+
+                <input
+                    type="text"
+                    id="baseWord"
+                    placeholder="e.g., rohith, project"
+                    autocomplete="off"
+                >
+
+            </div>
+
+            <!-- PASSWORD PRESETS -->
+
+            <div class="option-group preset-group">
+
+                <label for="presetSelect">
+
+                    Password Presets
+
+                </label>
+
+                <select id="presetSelect">
+
+                    <option value="">
+                        Select Preset
+                    </option>
+
+                    <option value="gaming">
+                        🎮 Gaming
+                    </option>
+
+                    <option value="banking">
+                        🏦 Banking
+                    </option>
+
+                    <option value="wifi">
+                        📶 WiFi
+                    </option>
+
+                    <option value="simple">
+                        🙂 Simple
+                    </option>
+
+                </select>
+
+            </div>
+
+            <!-- LENGTH SLIDER -->
+
+            <div class="option-group">
+
+                <label for="lengthSlider">
+
+                    Password Length:
+
+                    <span id="lengthValue">
+                        12
+                    </span>
+
+                </label>
+
+                <input
+                    type="range"
+                    id="lengthSlider"
+                    min="4"
+                    max="30"
+                    value="12"
+                >
+
+            </div>
+
+            <!-- CHECKBOXES -->
+
+            <div class="checkbox-group">
+
+                <!-- UPPERCASE -->
+
+                <div class="checkbox-option">
+
+                    <input
+                        type="checkbox"
+                        id="uppercase"
+                        checked
+                    >
+
+                    <label for="uppercase">
+
+                        Uppercase Letters (A-Z)
+
+                    </label>
+
+                </div>
+
+                <!-- LOWERCASE -->
+
+                <div class="checkbox-option">
+
+                    <input
+                        type="checkbox"
+                        id="lowercase"
+                        checked
+                    >
+
+                    <label for="lowercase">
+
+                        Lowercase Letters (a-z)
+
+                    </label>
+
+                </div>
+
+                <!-- NUMBERS -->
+
+                <div class="checkbox-option">
+
+                    <input
+                        type="checkbox"
+                        id="numbers"
+                        checked
+                    >
+
+                    <label for="numbers">
+
+                        Numbers (0-9)
+
+                    </label>
+
+                </div>
+
+                <!-- SYMBOLS -->
+
+                <div class="checkbox-option">
+
+                    <input
+                        type="checkbox"
+                        id="symbols"
+                    >
+
+                    <label for="symbols">
+
+                        Symbols (!@#$%^&*)
+
+                    </label>
+
+                </div>
+
+                <!-- EXCLUDE SIMILAR -->
+
+                <div class="checkbox-option">
+
+                    <input
+                        type="checkbox"
+                        id="excludeSimilar"
+                    >
+
+                    <label for="excludeSimilar">
+
+                        Exclude Similar Characters
+                        (O, 0, l, 1, I)
+
+                    </label>
+
+                </div>
+
+            </div>
+
+            <!-- STRENGTH SECTION -->
+
+            <div class="strength-container">
+
+                <div class="strength-header">
+
+                    <span>
+                        Password Strength
+                    </span>
+
+                    <span id="strength">
+                        Medium
+                    </span>
+
+                </div>
+
+                <div class="strength-bar">
+
+                    <div
+                        class="strength-fill"
+                        id="strengthFill">
+                    </div>
+
+                </div>
+
+                <div class="entropy-text">
+
+                    Entropy Score:
+
+                    <span id="entropyValue">
+                        0
+                    </span>
+
+                    bits
+
+                </div>
+
+            </div>
+
+            <!-- BUTTON GROUP -->
+
+            <div class="button-group">
+
+                <!-- GENERATE SINGLE -->
+
+                <button id="generateBtn">
+
+                    🔐 Generate Password
+
+                </button>
+
+                <!-- GENERATE MULTIPLE -->
+
+                <button id="multiGenerateBtn">
+
+                    ⚡ Generate 5 Passwords
+
+                </button>
+
+            </div>
+
+            <!-- PASSWORD DISPLAY -->
+
+            <div
+                class="password-box"
+                id="passwordBox"
+            >
+
+                <span id="password">
+
+                    Click generate to create a password
+
+                </span>
+
+                <button
+                    id="copyBtn"
+                    class="copy-btn"
+                >
+
+                    📋 Copy
+
+                </button>
+
+            </div>
+
+            <!-- MULTIPLE PASSWORDS LIST -->
+
+            <div
+                id="multiplePasswords"
+                class="multiple-passwords"
+            >
+            </div>
+
+            <!-- PASSWORD HISTORY -->
+
+            <div class="history-section">
+
+                <div class="history-header">
+
+                    <h2>
+                        Recent Passwords
+                    </h2>
+
+                    <!-- CLEAR BUTTON -->
+
+                    <button id="clearBtn">
+
+                        🗑 Clear
+
+                    </button>
+
+                    <!-- EXPORT BUTTON -->
+
+                    <button id="exportBtn">
+
+                        📄 Export PDF
+
+                    </button>
+
+                </div>
+
+                <!-- HISTORY LIST -->
+
+                <div
+                    id="historyList"
+                    class="history-list"
+                >
+
+                    <p class="empty-history">
+
+                        No passwords generated yet
+
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- TOAST -->
+
+            <div
+                id="toast"
+                class="toast">
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- JSPDF LIBRARY -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- MAIN JS -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
